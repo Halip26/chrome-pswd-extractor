@@ -50,7 +50,7 @@ def dekripsi_password(password, key):
         try:
             return str(win32crypt.CryptUnprotectData(password, None, None, None, 0)[1])
         except:
-            # tidak didukung
+            # kecuali tidak didukung
             return ""
 
 
