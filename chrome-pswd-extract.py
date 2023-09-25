@@ -9,7 +9,7 @@ from datetime import timezone, datetime, timedelta
 
 
 def dapatkan_waktu_chrome(chromedate):
-    """Mengembalikan objek datetime.datetime dari waktu format chrome Karena chromedate diformatkan sebagai jumlah mikrodetik dimulai dari Januari, 1601"""
+    """Mengembalikan objek datetime.datetime dari format waktu chrome Karena chromedate diformatkan sebagai jumlah mikrodetik dimulai dari Januari, 1601"""
     return datetime(1601, 1, 1) + timedelta(microseconds=chromedate)
 
 
