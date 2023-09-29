@@ -35,7 +35,7 @@ Berikut adalah penjelasan untuk setiap baris kodenya teman-teman:
 
 ```import sqlite3```: Baris ini mengimpor modul sqlite3 yang digunakan untuk berinteraksi dengan database SQLite.
 
-```import win32crypt```: Baris ini mengimpor modul win32crypt yang digunakan untuk operasi enkripsi dan dekripsi menggunakan API Windows.
+```import win32crypt```: Baris ini mengimpor modul win32crypt yang digunakan untuk operasi enkripsi dan dekripsi menggunakan API Windows. Namun, harap diperhatikan bahwa penggunaan modul win32crypt dan fungsi CryptUnprotectData mungkin tidak kompatibel dengan versi Windows yang lebih baru, termasuk Windows 11. Microsoft telah membuat perubahan pada model keamanan (TPM 2.0) yang mendasarinya, yang mungkin mencegah kode ini bekerja dengan benar atau memberikan hasil yang diinginkan.
 
 ```from Crypto.Cipher import AES```: Baris ini mengimpor modul AES dari pustaka pihak ketiga Crypto yang digunakan untuk operasi enkripsi dan dekripsi menggunakan algoritma AES.
 
